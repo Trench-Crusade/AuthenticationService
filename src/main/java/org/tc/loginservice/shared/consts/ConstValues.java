@@ -9,4 +9,5 @@ public class ConstValues {
     }
 
     public static final Integer TOKEN_LIFE_LENGTH = 1000 * 60 * 30;
+    public static final Integer ACCOUNT_VALIDATION_TIME = 7;
 }

@@ -1,4 +1,4 @@
-package org.tc.loginservice.core.usecases;
+package org.tc.loginservice.core.utility;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
-public class GenerateTokenUseCase {
+public class GenerateTokenUtilityCase {
 
     @Value("${jwt.secret}")
     private String secret;

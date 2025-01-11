@@ -1,5 +1,6 @@
 package org.tc.loginservice.infrastructure.postgres.dto;
 
+import org.tc.loginservice.infrastructure.postgres.enums.AccountStatus;
 import org.tc.loginservice.infrastructure.postgres.enums.AccountType;
 import org.tc.loginservice.infrastructure.postgres.enums.LanguageEnum;
 
@@ -12,6 +13,7 @@ public record UserSelectDto(
                 String email,
                 AccountType accountType,
                 LanguageEnum preferredLanguage,
+                AccountStatus accountStatus,
                 String passwordHash,
                 LocalDateTime lastLogin
 ) {

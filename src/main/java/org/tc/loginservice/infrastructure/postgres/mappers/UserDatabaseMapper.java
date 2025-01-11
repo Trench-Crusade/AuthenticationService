@@ -1,5 +1,6 @@
 package org.tc.loginservice.infrastructure.postgres.mappers;
 
+import org.tc.loginservice.core.domain.UserSnapshot;
 import org.tc.loginservice.infrastructure.postgres.dto.UserSelectDto;
 import org.tc.loginservice.infrastructure.postgres.entities.UserEntity;
 import org.tc.loginservice.shared.exceptions.TCIllegalStateException;
@@ -17,8 +18,25 @@ public class UserDatabaseMapper {
                 userEntity.getEmail(),
                 userEntity.getAccountType(),
                 userEntity.getPreferredLanguage(),
+                userEntity.getAccountStatus(),
                 userEntity.getPasswordHash(),
                 userEntity.getLastLogin()
+        );
+    }
+
+    public static UserEntity fromSnapshot(UserSnapshot userSnapshot) {
+        return new UserEntity(
+                null,
+                userSnapshot.getUserId().userId(),
+                userSnapshot.getUsername(),
+                userSnapshot.getEmail(),
+                userSnapshot.getAccountType(),
+                userSnapshot.getPreferredLanguage(),
+                userSnapshot.getAccountStatus(),
+                userSnapshot.getPasswordHash(),
+                userSnapshot.getLastLoginDate(),
+                null,
+                null
         );
     }
 }
