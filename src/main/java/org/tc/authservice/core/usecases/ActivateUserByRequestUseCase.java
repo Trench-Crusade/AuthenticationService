@@ -13,6 +13,8 @@ import org.tc.authservice.core.utility.VerifyTokenUtilityCase;
 import org.tc.authservice.infrastructure.api.dto.response.ActivateUserResponseDto;
 import org.tc.authservice.infrastructure.postgres.dto.UserActivationSelectDto;
 import org.tc.authservice.shared.exceptions.access.TCAccessDeniedException;
+import org.tc.authservice.shared.exceptions.access.detailed.TCTokenExpiredException;
+import org.tc.authservice.shared.exceptions.access.detailed.TCTokenNotProvidedException;
 import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
 import org.tc.authservice.shared.exceptions.api.detailed.TCInvalidRequestDataException;
 import org.tc.authservice.shared.exceptions.persistence.detailed.TCUpdateFailedException;
@@ -31,7 +33,7 @@ public class ActivateUserByRequestUseCase implements ActivateUserByRequestPort {
     private final ActivateAccountUtilityCase activateAccountUtilityCase;
 
     @Override
-    public ActivateUserResponseDto activateUser(HttpServletRequest request) throws TCEntityNotFoundException, TCAccessDeniedException, TCInvalidRequestDataException, TCUpdateFailedException {
+    public ActivateUserResponseDto activateUser(HttpServletRequest request) throws TCEntityNotFoundException, TCInvalidRequestDataException, TCUpdateFailedException, TCTokenExpiredException, TCTokenNotProvidedException {
         verifyTokenUtilityCase.verifyToken(request);
         log.info("Token verified successfully");
         UUID userId = retrieveTokenUtilityCase.getUserId(request);
