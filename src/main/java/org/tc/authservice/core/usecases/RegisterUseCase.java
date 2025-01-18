@@ -21,7 +21,7 @@ import org.tc.authservice.shared.consts.EmailConsts;
 import org.tc.authservice.shared.exceptions.general.detailed.TCIllegalStateException;
 import org.tc.authservice.shared.exceptions.out.detailed.TCEmailSendingFailedException;
 import org.tc.authservice.shared.exceptions.api.detailed.TCInvalidRequestDataException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCInsertFailedException;
+import org.tc.exceptions.persistence.detailed.TCInsertFailedException;
 
 import java.util.List;
 import java.util.Objects;

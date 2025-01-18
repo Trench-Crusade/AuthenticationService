@@ -9,8 +9,8 @@ import org.tc.authservice.core.ports.external.database.SelectUserByUserIdDatabas
 import org.tc.authservice.core.ports.external.database.UpdateUserAccountStatusDatabaseCommand;
 import org.tc.authservice.infrastructure.postgres.dto.UserSelectDto;
 import org.tc.infrastructure.postgres.enums.AccountStatus;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCUpdateFailedException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCUpdateFailedException;
 
 import java.util.UUID;
 

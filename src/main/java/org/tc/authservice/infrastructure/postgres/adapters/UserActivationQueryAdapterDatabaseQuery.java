@@ -8,7 +8,7 @@ import org.tc.authservice.infrastructure.postgres.dto.UserActivationSelectDto;
 import org.tc.infrastructure.postgres.entities.UserActivationEntity;
 import org.tc.authservice.infrastructure.postgres.mappers.UserActivationDatabaseMapper;
 import org.tc.authservice.infrastructure.postgres.repositories.UserActivationRepository;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 
 import java.util.Optional;
 import java.util.UUID;

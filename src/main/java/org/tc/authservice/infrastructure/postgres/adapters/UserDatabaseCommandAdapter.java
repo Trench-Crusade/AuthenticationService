@@ -10,7 +10,7 @@ import org.tc.authservice.core.ports.external.database.UpdateUserAccountStatusDa
 import org.tc.infrastructure.postgres.entities.UserEntity;
 import org.tc.authservice.infrastructure.postgres.mappers.UserDatabaseMapper;
 import org.tc.authservice.infrastructure.postgres.repositories.UserRepository;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

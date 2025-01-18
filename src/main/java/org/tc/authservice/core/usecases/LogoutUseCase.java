@@ -11,7 +11,7 @@ import org.tc.authservice.infrastructure.api.dto.response.LogoutResponseDto;
 import org.tc.infrastructure.redis.entries.TokenBlacklistEntry;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenExpiredException;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenNotProvidedException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCInsertFailedException;
+import org.tc.exceptions.persistence.detailed.TCInsertFailedException;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

@@ -16,8 +16,8 @@ import org.tc.authservice.shared.exceptions.general.TCGeneralException;
 import org.tc.authservice.shared.exceptions.general.detailed.TCIllegalStateException;
 import org.tc.authservice.shared.exceptions.general.detailed.TCUtilityClassException;
 import org.tc.authservice.shared.exceptions.out.TCOutboundException;
-import org.tc.authservice.shared.exceptions.persistence.TCPersistenceException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.TCPersistenceException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 
 @Slf4j
 @Hidden
