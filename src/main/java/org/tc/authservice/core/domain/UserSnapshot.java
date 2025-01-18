@@ -2,9 +2,9 @@ package org.tc.authservice.core.domain;
 
 import lombok.Getter;
 import org.tc.authservice.core.domain.vo.UserId;
-import org.tc.authservice.infrastructure.postgres.enums.AccountStatus;
-import org.tc.authservice.infrastructure.postgres.enums.AccountType;
-import org.tc.authservice.infrastructure.postgres.enums.LanguageEnum;
+import org.tc.infrastructure.postgres.enums.AccountStatus;
+import org.tc.infrastructure.postgres.enums.AccountType;
+import org.tc.infrastructure.postgres.enums.LanguageEnum;
 
 import java.time.LocalDateTime;
 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.tc.authservice.core.ports.external.database.SelectUserActivationByUserIdDatabaseQuery;
 import org.tc.authservice.core.ports.external.database.SelectUserActivationByActivationTokenDatabaseQuery;
 import org.tc.authservice.infrastructure.postgres.dto.UserActivationSelectDto;
-import org.tc.authservice.infrastructure.postgres.entities.UserActivationEntity;
+import org.tc.infrastructure.postgres.entities.UserActivationEntity;
 import org.tc.authservice.infrastructure.postgres.mappers.UserActivationDatabaseMapper;
 import org.tc.authservice.infrastructure.postgres.repositories.UserActivationRepository;
 import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;

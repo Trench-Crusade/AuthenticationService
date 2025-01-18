@@ -3,7 +3,7 @@ package org.tc.authservice.infrastructure.postgres.repositories;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import org.tc.authservice.infrastructure.postgres.entities.UserActivationEntity;
+import org.tc.infrastructure.postgres.entities.UserActivationEntity;
 
 import java.util.Optional;
 import java.util.UUID;

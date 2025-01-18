@@ -2,7 +2,7 @@ package org.tc.authservice.infrastructure.postgres.mappers;
 
 import org.tc.authservice.core.domain.UserSnapshot;
 import org.tc.authservice.infrastructure.postgres.dto.UserSelectDto;
-import org.tc.authservice.infrastructure.postgres.entities.UserEntity;
+import org.tc.infrastructure.postgres.entities.UserEntity;
 import org.tc.authservice.shared.exceptions.general.detailed.TCUtilityClassException;
 
 public class UserDatabaseMapper {

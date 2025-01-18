@@ -6,8 +6,8 @@ import org.tc.authservice.core.domain.vo.UserId;
 import org.tc.authservice.core.domain.vo.UserSecurity;
 import org.tc.authservice.infrastructure.api.dto.request.RegisterRequestDto;
 import org.tc.authservice.infrastructure.postgres.dto.UserSelectDto;
-import org.tc.authservice.infrastructure.postgres.enums.AccountStatus;
-import org.tc.authservice.infrastructure.postgres.enums.LanguageEnum;
+import org.tc.infrastructure.postgres.enums.AccountStatus;
+import org.tc.infrastructure.postgres.enums.LanguageEnum;
 import org.tc.authservice.shared.exceptions.general.detailed.TCIllegalStateException;
 
 import java.time.LocalDateTime;

@@ -3,7 +3,7 @@ package org.tc.authservice.infrastructure.postgres.adapters;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.tc.authservice.core.ports.external.database.InsertNewUserActivationDatabaseCommand;
-import org.tc.authservice.infrastructure.postgres.entities.UserActivationEntity;
+import org.tc.infrastructure.postgres.entities.UserActivationEntity;
 import org.tc.authservice.infrastructure.postgres.repositories.UserActivationRepository;
 import org.tc.authservice.shared.consts.ConstValues;
 

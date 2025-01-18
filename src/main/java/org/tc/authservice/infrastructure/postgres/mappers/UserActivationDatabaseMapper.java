@@ -1,7 +1,7 @@
 package org.tc.authservice.infrastructure.postgres.mappers;
 
 import org.tc.authservice.infrastructure.postgres.dto.UserActivationSelectDto;
-import org.tc.authservice.infrastructure.postgres.entities.UserActivationEntity;
+import org.tc.infrastructure.postgres.entities.UserActivationEntity;
 import org.tc.authservice.shared.exceptions.general.detailed.TCUtilityClassException;
 
 public class UserActivationDatabaseMapper {

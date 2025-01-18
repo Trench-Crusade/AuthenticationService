@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import org.tc.authservice.core.ports.external.database.SelectUserByEmailDatabaseQuery;
 import org.tc.authservice.core.ports.external.database.SelectUserByUserIdDatabaseQuery;
 import org.tc.authservice.infrastructure.postgres.dto.UserSelectDto;
-import org.tc.authservice.infrastructure.postgres.entities.UserEntity;
-import org.tc.authservice.infrastructure.postgres.mappers.UserDatabaseMapper;
 import org.tc.authservice.infrastructure.postgres.repositories.UserRepository;
+import org.tc.infrastructure.postgres.entities.UserEntity;
+import org.tc.authservice.infrastructure.postgres.mappers.UserDatabaseMapper;
 import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
 
 import java.util.Optional;
