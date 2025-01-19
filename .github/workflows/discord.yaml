@@ -8,12 +8,14 @@ jobs:
     env:
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
+
       - uses: actions/checkout@master
       - name: send custom message with args
         uses: appleboy/discord-action@master
+        env:
+          BRANCH: ${GITHUB_REF##*/}
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
           message: Commit has been pushed on branch ${{BRANCH}}
-        env:
-          BRANCH: ${GITHUB_REF##*/}
+
