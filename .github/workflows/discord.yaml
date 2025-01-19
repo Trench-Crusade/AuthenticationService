@@ -13,5 +13,5 @@ jobs:
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          message: Commit has been pushed by ${{github.actor}}
+          message: Commit to repository ${{github.repository}} has been pushed by ${{github.actor}}
 
