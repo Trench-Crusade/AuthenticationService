@@ -1,5 +1,11 @@
 name: discord message
-on: [push]
+on:
+  pull_request:
+        branches: [ "main" ]
+        paths-ignore:
+          - '**.md'
+          - '**.yml'
+          - '**.yaml'
 jobs:
 
   build:
@@ -8,10 +14,10 @@ jobs:
     steps:
 
       - uses: actions/checkout@master
-      - name: send custom message with args
+      - name: Send discord message
         uses: appleboy/discord-action@master
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          message: Commit on branch ${{github.ref_name}} in repository ${{github.server_url}}/${{github.repository}} has been pushed by ${{github.actor}}.
+          message: Pull request from ${{github.head_ref}} to ${{github.base_ref}} on repository ${{github.server_url}}/${{github.repository}} has been intiated by ${{github.actor}}.
 
