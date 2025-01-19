@@ -1,6 +1,6 @@
 package org.tc.authservice.infrastructure.api.dto.request;
 
-import org.tc.authservice.infrastructure.postgres.enums.LanguageEnum;
+import org.tc.infrastructure.postgres.enums.LanguageEnum;
 
 public record RegisterRequestDto(
         String username,

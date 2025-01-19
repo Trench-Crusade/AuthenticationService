@@ -14,8 +14,8 @@ import org.tc.authservice.core.utility.GenerateTokenUtilityCase;
 import org.tc.authservice.infrastructure.api.dto.request.LoginRequestDto;
 import org.tc.authservice.infrastructure.api.dto.response.TokenResponseDto;
 import org.tc.authservice.infrastructure.postgres.dto.UserSelectDto;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCUpdateFailedException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCUpdateFailedException;
 import org.tc.authservice.shared.exceptions.api.detailed.TCInvalidRequestDataException;
 
 import java.time.LocalDateTime;

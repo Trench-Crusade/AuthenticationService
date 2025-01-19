@@ -12,12 +12,11 @@ import org.tc.authservice.core.utility.RetrieveTokenUtilityCase;
 import org.tc.authservice.core.utility.VerifyTokenUtilityCase;
 import org.tc.authservice.infrastructure.api.dto.response.ActivateUserResponseDto;
 import org.tc.authservice.infrastructure.postgres.dto.UserActivationSelectDto;
-import org.tc.authservice.shared.exceptions.access.TCAccessDeniedException;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenExpiredException;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenNotProvidedException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 import org.tc.authservice.shared.exceptions.api.detailed.TCInvalidRequestDataException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCUpdateFailedException;
+import org.tc.exceptions.persistence.detailed.TCUpdateFailedException;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

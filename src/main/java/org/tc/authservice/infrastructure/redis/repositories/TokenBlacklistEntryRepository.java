@@ -3,7 +3,7 @@ package org.tc.authservice.infrastructure.redis.repositories;
 import lombok.NonNull;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import org.tc.authservice.infrastructure.redis.entries.TokenBlacklistEntry;
+import org.tc.infrastructure.redis.entries.TokenBlacklistEntry;
 
 import java.util.List;
 import java.util.Optional;

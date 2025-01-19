@@ -7,10 +7,10 @@ import org.tc.authservice.core.domain.UserSnapshot;
 import org.tc.authservice.core.ports.external.database.InsertNewUserDatabaseCommand;
 import org.tc.authservice.core.ports.external.database.UpdateLastLoginDateDatabaseCommand;
 import org.tc.authservice.core.ports.external.database.UpdateUserAccountStatusDatabaseCommand;
-import org.tc.authservice.infrastructure.postgres.entities.UserEntity;
+import org.tc.infrastructure.postgres.entities.UserEntity;
 import org.tc.authservice.infrastructure.postgres.mappers.UserDatabaseMapper;
 import org.tc.authservice.infrastructure.postgres.repositories.UserRepository;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

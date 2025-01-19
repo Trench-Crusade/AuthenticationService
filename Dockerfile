@@ -1,14 +1,9 @@
 FROM maven:3.9-eclipse-temurin-22-alpine AS build
+COPY src /app/src
+COPY pom.xml /app
+COPY local-maven-repo /app/local-maven-repo
 
-WORKDIR /app
-
-COPY pom.xml .
-
-RUN mvn dependency:resolve-plugins
-
-COPY src/main src/main
-
-RUN mvn package
+RUN mvn -f /app/pom.xml clean package
 
 FROM eclipse-temurin:22-jre-alpine
 

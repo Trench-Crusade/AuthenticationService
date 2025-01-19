@@ -22,9 +22,9 @@ import org.tc.authservice.shared.exceptions.access.detailed.TCTokenProvidedExcep
 import org.tc.authservice.shared.exceptions.api.detailed.TCInvalidRequestDataException;
 import org.tc.authservice.shared.exceptions.general.detailed.TCIllegalStateException;
 import org.tc.authservice.shared.exceptions.out.detailed.TCEmailSendingFailedException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCEntityNotFoundException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCInsertFailedException;
-import org.tc.authservice.shared.exceptions.persistence.detailed.TCUpdateFailedException;
+import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
+import org.tc.exceptions.persistence.detailed.TCInsertFailedException;
+import org.tc.exceptions.persistence.detailed.TCUpdateFailedException;
 
 import java.util.Objects;
 import java.util.UUID;

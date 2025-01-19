@@ -1,0 +1,23 @@
+name: discord message
+on:
+  pull_request:
+        branches: [ "main" ]
+        paths-ignore:
+          - '**.md'
+          - '**.yml'
+          - '**.yaml'
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@master
+      - name: Send discord message
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          message: Pull request from ${{github.head_ref}} to ${{github.base_ref}} on repository ${{github.server_url}}/${{github.repository}} has been intiated by ${{github.actor}}.
+

@@ -1,8 +1,8 @@
 package org.tc.authservice.infrastructure.postgres.dto;
 
-import org.tc.authservice.infrastructure.postgres.enums.AccountStatus;
-import org.tc.authservice.infrastructure.postgres.enums.AccountType;
-import org.tc.authservice.infrastructure.postgres.enums.LanguageEnum;
+import org.tc.infrastructure.postgres.enums.AccountStatus;
+import org.tc.infrastructure.postgres.enums.AccountType;
+import org.tc.infrastructure.postgres.enums.LanguageEnum;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

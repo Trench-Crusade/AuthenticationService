@@ -126,12 +126,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.9.2</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-failsafe-plugin</artifactId>
 			<version>3.2.5</version>
@@ -172,7 +166,21 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- TRENCH CRUSADE -->
+		<dependency>
+			<groupId>org.tc</groupId>
+			<artifactId>databaseDefinition</artifactId>
+			<version>0.1 </version>
+
+		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>local-maven-repo</id>
+			<url>file:///${project.basedir}/local-maven-repo</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

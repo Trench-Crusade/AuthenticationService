@@ -5,8 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.tc.authservice.core.ports.external.redis.DeleteAllBlacklistTokensExpired;
 import org.tc.authservice.core.ports.external.redis.InsertBlacklistTokenEntryRedisCommand;
-import org.tc.authservice.infrastructure.redis.entries.TokenBlacklistEntry;
 import org.tc.authservice.infrastructure.redis.repositories.TokenBlacklistEntryRepository;
+import org.tc.infrastructure.redis.entries.TokenBlacklistEntry;
 
 import java.time.LocalDateTime;
 import java.util.List;

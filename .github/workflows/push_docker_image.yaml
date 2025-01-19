@@ -34,3 +34,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  build:
+    name: Notify Discord
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Send discord message
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DOCKER_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DOCKER_WEBHOOK_TOKEN }}
+          message: New image of  ${{github.server_url}}/${{github.repository}} has been deployed to https://hub.docker.com/repositories/trenchcrusadedockerrepo
