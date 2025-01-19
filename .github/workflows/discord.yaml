@@ -14,4 +14,4 @@ jobs:
         with:
           webhook_id: ${{ secrets.WEBHOOK_ID }}
           webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          message: Commit has been pushed on branch $BRANCH_NAME.
+          message: Commit has been pushed on branch ${GITHUB_REF##*/}
