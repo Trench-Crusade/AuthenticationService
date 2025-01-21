@@ -64,7 +64,7 @@ public class RetrieveTokenUtilityCase {
 
         Claims claims;
         try{
-            claims = Jwts.parserBuilder().setSigningKey(secret.getBytes()).build().parseClaimsJws(token).getBody();
+            claims = Jwts.parser().setSigningKey(secret.getBytes()).build().parseClaimsJws(token).getBody();
         }
         catch (ExpiredJwtException e){
             throw new TCTokenExpiredException(e.getMessage());
