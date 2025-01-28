@@ -1,7 +1,9 @@
 package org.tc.authservice.shared.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @Configuration
 @EnableWebSecurity
+@Slf4j
 public class SecurityConfiguration {
 
 
@@ -38,10 +41,13 @@ public class SecurityConfiguration {
 
                     cors.configurationSource(source);
                 })
-
-
+//                .oauth2Login(Customizer.withDefaults())
+                .oauth2Login(Customizer.withDefaults())
+                .oauth2Login(oauth -> oauth.defaultSuccessUrl("/authentication/loginByGoogle", true))
+                .formLogin(Customizer.withDefaults())
                 .authorizeHttpRequests(request -> request.requestMatchers("/**").permitAll());
-        return http.build();
+        log.info(http.oauth2Login(Customizer.withDefaults()).toString());
+        return http.getOrBuild();
     }
 
 }

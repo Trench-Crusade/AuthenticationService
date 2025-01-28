@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import org.tc.authservice.core.ports.internal.*;
 import org.tc.authservice.infrastructure.api.dto.request.ActivateUserByTokenRequestDto;
@@ -26,6 +27,7 @@ import org.tc.exceptions.persistence.detailed.TCEntityNotFoundException;
 import org.tc.exceptions.persistence.detailed.TCInsertFailedException;
 import org.tc.exceptions.persistence.detailed.TCUpdateFailedException;
 
+import java.security.Principal;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -117,6 +119,21 @@ public class AuthenticationRestController {
             throw new TCTokenNotProvidedException("Token has not been provided");
         }
         return new ResponseEntity<>(logoutPort.logOut(request), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "user")
+    public Principal user(Principal user) {
+        return user;
+    }
+
+    @GetMapping(value = "loginByGoogle")
+    public ResponseEntity<TokenResponseDto> loginByGoogle(HttpServletRequest request, Principal user) throws TCUpdateFailedException, TCInsertFailedException, TCEntityNotFoundException, TCInvalidRequestDataException {
+        OAuth2AuthenticationToken userDetails = (OAuth2AuthenticationToken) user;
+        LoginRequestDto loginRequestDto = new LoginRequestDto(
+                userDetails.getName(),
+                userDetails.getPrincipal().getAttribute("email")
+        );
+        return new ResponseEntity<>(logInUseCase.logIn(request, loginRequestDto), HttpStatus.OK);
     }
 
     private static void checkIfNoTokenProvided(HttpServletRequest request) throws TCTokenProvidedException {
