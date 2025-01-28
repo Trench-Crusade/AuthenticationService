@@ -1,7 +1,7 @@
 package org.tc.authservice.core.utility;
 
+import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,12 +21,14 @@ public class GenerateTokenUtilityCase {
     private String secret;
 
     public String createToken(Map<String, Object> claims, String userName) {
-        return Jwts.builder()
-                .setClaims(claims)
-                .setSubject(userName)
-                .setIssuedAt(Date.from(Instant.now()))
-                .setExpiration(Date.from(Instant.now().plus(ConstValues.TOKEN_LIFE_LENGTH, ChronoUnit.SECONDS)))
-                .signWith(Keys.hmacShaKeyFor(secret.getBytes()), SignatureAlgorithm.HS256)
+        JwtBuilder builder = Jwts.builder();
+
+        claims.forEach(builder::claim);
+        return builder
+                .subject(userName)
+                .issuedAt(Date.from(Instant.now()))
+                .expiration(Date.from(Instant.now().plus(ConstValues.TOKEN_LIFE_LENGTH, ChronoUnit.SECONDS)))
+                .signWith(Keys.hmacShaKeyFor(secret.getBytes()))
                 .compact();
     }
 

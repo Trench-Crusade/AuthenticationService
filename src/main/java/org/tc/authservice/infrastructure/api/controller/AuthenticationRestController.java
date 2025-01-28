@@ -8,8 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 import org.tc.authservice.core.ports.internal.*;
@@ -133,7 +131,7 @@ public class AuthenticationRestController {
         OAuth2AuthenticationToken userDetails = (OAuth2AuthenticationToken) user;
         LoginRequestDto loginRequestDto = new LoginRequestDto(
                 userDetails.getName(),
-                userDetails.getName()
+                userDetails.getPrincipal().getAttribute("email")
         );
         return new ResponseEntity<>(logInUseCase.logIn(request, loginRequestDto), HttpStatus.OK);
     }
