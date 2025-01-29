@@ -33,6 +33,8 @@ build/
 .vscode/
 
 /src/main/resources/application.properties
-/helm/values.yaml
 /helm/templates/secrets.yaml
-/helm/templates/configMap.yaml
+
+/src/main/resources/openapi.json
+/helm/templates/NOTES.txt
+/src/main/resources/static/login.html

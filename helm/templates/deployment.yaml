@@ -44,7 +44,7 @@ spec:
             - name: spring.config.import
               valueFrom:
                 secretKeyRef:
-                  name: {{ include "helm.fullname" . }}-secret
+                  name: auth-service-secret
                   key: config-address
           ports:
             - name: http
