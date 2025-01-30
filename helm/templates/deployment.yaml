@@ -46,6 +46,17 @@ spec:
                 secretKeyRef:
                   name: auth-service-secret
                   key: config-address
+            - name: spring.security.oauth2.client.registration.google.client-id
+              valueFrom:
+                secretKeyRef:
+                  name: auth-service-secret
+                  key: google-client-id
+            - name: spring.security.oauth2.client.registration.google.client-secret
+              valueFrom:
+                secretKeyRef:
+                  name: auth-service-secret
+                  key: google-client-secret
+
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
