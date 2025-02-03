@@ -9,10 +9,10 @@ FROM eclipse-temurin:22-jre-alpine
 
 WORKDIR /app
 
-COPY --from=build /app/target/authService-0.4.jar .
+COPY --from=build /app/target/authService-0.5.jar .
 
 RUN apk --no-cache add curl
 
 EXPOSE 8091
 
-CMD ["java", "-jar", "authService-0.4.jar"]
+CMD ["java", "-jar", "authService-0.5.jar"]
