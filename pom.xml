@@ -187,8 +187,7 @@
 		<dependency>
 			<groupId>org.tc</groupId>
 			<artifactId>databaseDefinition</artifactId>
-			<version>0.1 </version>
-
+			<version>0.2 </version>
 		</dependency>
 	</dependencies>
 	<repositories>
