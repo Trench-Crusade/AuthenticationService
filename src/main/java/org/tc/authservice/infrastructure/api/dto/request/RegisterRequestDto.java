@@ -9,4 +9,14 @@ public record RegisterRequestDto(
         String repeatedPassword,
         LanguageEnum preferredLanguage
 ) {
+    @Override
+    public String toString() {
+        return "RegisterRequestDto{" +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", repeatedPassword='" + repeatedPassword + '\'' +
+                ", preferredLanguage=" + preferredLanguage +
+                '}';
+    }
 }

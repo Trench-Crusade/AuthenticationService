@@ -39,6 +39,7 @@ public class RegisterUseCase implements RegisterPort {
 
     @Override
     public RegisterResponseDto register(RegisterRequestDto registerRequestDto) throws TCInvalidRequestDataException, TCEmailSendingFailedException, TCInsertFailedException, TCIllegalStateException {
+        log.error(registerRequestDto.toString());
         String password = bCryptPasswordEncoder.encode(registerRequestDto.password());
         if(!Objects.equals(registerRequestDto.password(), registerRequestDto.repeatedPassword())){
             throw new TCInvalidRequestDataException("Provided passwords do not match");
