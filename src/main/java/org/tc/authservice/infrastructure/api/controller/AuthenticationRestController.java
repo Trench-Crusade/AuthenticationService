@@ -51,7 +51,7 @@ public class AuthenticationRestController {
             @ApiResponse(responseCode = "424", description = "Database operation failure or email sending failure"),
     })
     @PostMapping(value = "register")
-    public ResponseEntity<RegisterResponseDto> register(HttpServletRequest request, RegisterRequestDto registerRequestDto) throws TCTokenProvidedException, TCInsertFailedException, TCEmailSendingFailedException, TCInvalidRequestDataException, TCIllegalStateException {
+    public ResponseEntity<RegisterResponseDto> register(HttpServletRequest request, @RequestBody RegisterRequestDto registerRequestDto) throws TCTokenProvidedException, TCInsertFailedException, TCEmailSendingFailedException, TCInvalidRequestDataException, TCIllegalStateException {
         checkIfNoTokenProvided(request);
         return new ResponseEntity<>(registerUseCase.register(registerRequestDto), HttpStatus.OK);
     }
