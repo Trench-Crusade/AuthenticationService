@@ -8,7 +8,7 @@ import org.tc.authservice.core.ports.external.redis.InsertBlacklistTokenEntryRed
 import org.tc.authservice.core.ports.internal.LogoutPort;
 import org.tc.authservice.core.utility.RetrieveTokenUtilityCase;
 import org.tc.authservice.infrastructure.api.dto.response.LogoutResponseDto;
-import org.tc.infrastructure.redis.entries.TokenBlacklistEntry;
+import org.tc.authservice.infrastructure.redis.entities.TokenBlacklistEntry;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenExpiredException;
 import org.tc.authservice.shared.exceptions.access.detailed.TCTokenNotProvidedException;
 import org.tc.exceptions.persistence.detailed.TCInsertFailedException;

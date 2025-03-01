@@ -1,4 +1,4 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Mon Feb 03 13:42:26 CET 2025
-databaseDefinition-0.2.jar>=
-databaseDefinition-0.2.pom>=
+#Sat Mar 01 16:13:43 CET 2025
+databaseDefinition-0.3.jar>=
+databaseDefinition-0.3.pom>=
