@@ -4,8 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.tc.authservice.core.ports.external.redis.SelectBlacklistTokenEntryByIdRedisQuery;
 import org.tc.authservice.infrastructure.redis.repositories.TokenBlacklistEntryRepository;
-import org.tc.infrastructure.redis.entries.TokenBlacklistEntry;
-
+import org.tc.authservice.infrastructure.redis.entities.TokenBlacklistEntry;
 import java.util.Optional;
 
 @Service
