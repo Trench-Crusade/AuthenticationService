@@ -206,32 +206,6 @@
         </dependency>
 
         <!-- Transitive -->
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-handler -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-handler</artifactId>
-            <version>5.0.0.Alpha2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-handler -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-common</artifactId>
-            <version>5.0.0.Alpha2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-handler -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-transport</artifactId>
-            <version>5.0.0.Alpha2</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.netty</groupId>
-                    <artifactId>netty-common</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
         <dependency>
